@@ -15,7 +15,7 @@ main().catch(err => console.log(err));
 async function main() {
   const { Schema, model } = mongoose;
   try {
-    await mongoose.connect(`mongodb+srv://admin-shuei:tr228pq7e@cluster0.nmxfxgo.mongodb.net/blogDB`);
+    await mongoose.connect(`mongodb+srv://${process.env.DATABASE_AUTHENTIFICATION}`);
 
     const contentsSchema = new Schema({
       title: String,
